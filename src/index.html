@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
+    .custom-gradient-text {
+      background: linear-gradient(92deg, #FFF 23.07%, rgba(255, 255, 255, 0.70) 94.92%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .custom-paragraph {
+      color: #9B9CA1;
+    }
+    /* Mobile Menu - Full Width Dropdown */
+    #mobile-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black; /* Set to black */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+      transform: translateY(-100%); /* Start off-screen */
+    }
+
+    #mobile-menu.open {
+      transform: translateY(0); /* Bring the menu into view */
+    }
+
+    /* Close Icon Styling */
+    .close-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+  </head>
+  <body style="background: linear-gradient(180deg, #06081D 70.33%, rgba(99, 0, 255, 0.40) 122.6%), #06081D;">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-5">
+    <!-- Navigation Bar -->
+    <header class="w-full flex justify-center lg:py-10 md:py-0 sm:py-0">
+      <div class="inline-flex w-full max-w-[900px] p-[20px_30px] justify-between items-center gap-[80px] rounded-[40px] bg-[rgba(255,255,255,0.04)] backdrop-blur-[30px]">
+        <!-- Logo -->
+        <div>
+          <img src="../src/assets/logo.svg" alt="Logo" class="h-8">
+        </div>
+        <!-- Menu Items -->
+        <nav class="hidden sm:flex gap-[20px]">
+          <a href="#" class="text-white hover:text-gray-300 transition">Product</a>
+          <a href="#" class="text-white hover:text-gray-300 transition">Integrations</a>
+          <a href="#" class="text-white hover:text-gray-300 transition">Blog</a>
+          <a href="#" class="text-white hover:text-gray-300 transition">Pricing</a>
+        </nav>
+        <!-- Button -->
+        <button class="px-6 py-2 text-white font-semibold hover:bg-blue-600 transition rounded-[64px] border border-[#3B3B3B] bg-[#1F1F1F] hidden sm:block">
+          Get started
+        </button>
+        <!-- Mobile Menu Icon (For Mobile View) -->
+        <div class="sm:hidden">
+          <button id="menu-toggle" class="text-white">
+            <!-- Hamburger icon (menu for mobile) -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Review section -->
+    <div class="w-[320px] mx-auto h-12 bg-[rgba(255,255,255,0.04)] backdrop-blur-[30px] rounded-[30px] flex justify-center items-center gap-4 p-1 mt-20">
+      <img src="../src/assets/review.png" alt="Image" class="w-[90px] h-[30px] object-cover rounded-full">
+      <p class="text-[#9B9CA1] text-[13.891px] font-semibold leading-[16px]">1,200+ reviews (4.9 of 5)</p>
+    </div>
+    <!-- Hero Content -->
+    <div class="text-center max-w-full mx-auto mt-10">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-medium text-center custom-gradient-text pb-2 max-w-[900px] mx-auto">
+        Empowering Entrepreneurs with the Future of Technology
+      </h1>
+      <p class="text-sm sm:text-lg mb-2 font-normal custom-paragraph pt-5 pb-2 max-w-[900px] mx-auto">
+        Unlock the full potential of AI to streamline your business processes, enhance your content creation, and drive innovation. Nikol Digital provides a suite of powerful tools designed specifically for entrepreneurs looking to scale their businesses and optimize their workflows.
+      </p>
+      <!-- Hero img -->
+      <img src="../src/assets/hero.png" alt="Hero Section Image" class="mx-auto w-[1200px] h-auto mt-2">
+    </div>
+  </section>
+
+  <!-- Image Carousel -->
+  <section class="lg:py-20 md:py-0 sm:py-0">
+    <div class="swiper-container overflow-hidden w-full">
+      <div class="swiper-wrapper">
+        <!-- Single Image Loop -->
+        <div class="swiper-slide">
+          <img src="../src/assets/carousel-logo.png" alt="logo 1" class="w-full mx-autoh sm:h-[40px] md:h-[60px] lg:h-[80px]">
+        </div>
+        <div class="swiper-slide">
+          <img src="../src/assets/carousel-logo.png" alt="logo 2" class="w-full mx-auto sm:h-[40px] md:h-[60px] lg:h-[80px]">
+        </div>
+        <div class="swiper-slide">
+          <img src="../src/assets/carousel-logo.png" alt="logo 3" class="w-full mx-auto sm:h-[40px] md:h-[60px] lg:h-[80px]">
+        </div>
+        <div class="swiper-slide">
+          <img src="../src/assets/carousel-logo.png" alt="logo 4" class="w-full mx-auto sm:h-[40px] md:h-[60px] lg:h-[80px]">
+        </div>
+        <div class="swiper-slide">
+          <img src="../src/assets/carousel-logo.png" alt="logo 5" class="w-full mx-auto sm:h-[40px] md:h-[60px] lg:h-[80px]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="px-5 py-10">
+  <div class="flex justify-center items-center">
+    <div class="relative border-t border-l border-r border-[rgba(99,0,255,0.50)] rounded-[32px] bg-transparent">
+      <div class="m-[5px] bg-[#6300FF] rounded-[64px] px-3 py-1.5 text-white font-medium text-[14px] leading-[16.8px] flex justify-center items-center" style="font-family: 'DM Sans', sans-serif;">
+        Benefits
+      </div>
+    </div>
+  </div>
+  <!-- Title -->
+  <div class="text-center mb-10"> 
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-medium text-center custom-gradient-text pb-2 pt-5">Why Nikol Digital?</h2>
+    <p class="text-sm sm:text-lg mb-2 font-normal custom-paragraph pt-5 pb-2 max-w-[466px] mx-auto">Experience unparalleled innovation and efficiency with solutions designed for your success.</p>
+  </div> 
+ <!-- Box -->
+  <div class="flex justify-center gap-[25px] flex-wrap w-full max-w-[13000px] mx-auto py-5">
+    <!-- Box 1 -->
+    <div class="bg-[#030417] border border-[#3b3b3b99] rounded-[10px] backdrop-blur-[10px] w-[563px] h-[442px] flex flex-col items-center justify-center text-center px-[24px] py-[30px]">
+      <span class="text-[#FFF] text-center text-[20px] sm:text-[24.64px] font-bold leading-[140%]">Tailored for Entrepreneurs</span>
+      <p class="mt-3 mb-2 text-center text-[16px] sm:text-[14px] font-normal leading-[160%] sm:w-auto max-w-[350px] text-[#828282]">Our AI-driven platform is built for entrepreneurs, offering tools that help you manage, create, and scale your business effectively.</p>
+      <img src="../src/assets/benefit1.png" alt="Benefit 1" class="mt-4 w-full h-auto">
+    </div>
+  
+    <!-- Box 2 -->
+    <div class="bg-[#030417] border border-[#3b3b3b99] rounded-[10px] backdrop-blur-[10px] lg:w-[729px] md:w-[563px] h-[442px] flex flex-col items-center justify-center text-center px-[24px] py-[30px]">
+      <span class="text-[#FFF] text-center text-[20px] sm:text-[24.64px] font-bold leading-[140%]">AI-Powered Efficiency</span>
+      <p class="mt-3 mb-2 text-center text-[16px] sm:text-[14px] font-normal leading-[160%] sm:w-auto max-w-[410px] text-[#828282]">From social media management to financial planning, our intelligent apps use cutting-edge technology to automate and optimize essential business tasks. </p>
+      <img src="../src/assets/benefit2.png" alt="Benefit 2" class="mt-4 w-full h-auto">
+    </div>
+  
+    <!-- Box 3 -->
+    <div class="bg-[#030417] border border-[#3b3b3b99] rounded-[10px] backdrop-blur-[10px] lg:w-[729px] md:w-[563px] h-[442px] flex flex-col items-center justify-center text-center px-[24px] py-[30px]">
+      <span class="text-[#FFF] text-center text-[20px] sm:text-[24.64px] font-bold leading-[140%]">Solutions for Every Stage</span>
+      <p class="mt-3 mb-2 text-center text-[16px] sm:text-[14px] font-normal leading-[160%] sm:w-auto max-w-[350px] text-[#828282]"> Whether you're just starting out or ready to scale, Nikol Digital offers solutions that evolve with your business.</p>
+      <img src="../src/assets/benefit3.png" alt="Benefit 3" class="mt-4 w-full h-auto">
+    </div>
+  
+    <!-- Box 4 -->
+    <div class="bg-[#030417] border border-[#3b3b3b99] rounded-[10px] backdrop-blur-[10px] w-[563px] h-[442px] flex flex-col items-center justify-center text-center px-[24px] py-[30px]">
+      <span class="text-[#FFF] text-center text-[20px] sm:text-[24.64px] font-bold leading-[140%]">All-in-One Ecosystem</span>
+      <p class="mt-3 mb-2 text-center text-[16px] sm:text-[14px] font-normal leading-[160%] sm:w-auto max-w-[350px] text-[#828282]"> Access a suite of apps, including market research, customer management, content creation, and financial tools—everything you need in one platform.</p>
+      <img src="../src/assets/benefit4.png" alt="Benefit 4" class="mt-4 w-full h-auto">
+    </div>
+  </div>
+  </section>
+
+ <!-- Product Section -->
+  <section class="lg:py-20 md:py-10 sm:py-10 px-5">
+  <!-- Product tile -->
+  <div class="flex justify-center items-center ">
+    <div class="relative border-t border-l border-r border-[rgba(99,0,255,0.50)] rounded-[32px] bg-transparent">
+      <div class="m-[5px] bg-[#6300FF] rounded-[64px] px-3 py-1.5 text-white font-medium text-[14px] leading-[16.8px] flex justify-center items-center" style="font-family: 'DM Sans', sans-serif;">
+        Product
+      </div>
+    </div>
+  </div>
+  <!-- Title Section -->
+  <div class="text-center mb-10"> 
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-medium custom-gradient-text pb-2 pt-5">
+      Seamless Integration.
+    </h2>
+    <p class="text-sm sm:text-lg mb-2 font-normal custom-paragraph pt-5 pb-2 max-w-[466px] mx-auto">
+      Experience unparalleled innovation and efficiency with solutions designed for your success.
+    </p>
+  </div> 
+  <!-- Product Image Block -->
+  <div class="flex justify-center">
+    <div
+      class="rounded-[10px] border border-[rgba(59,59,59,0.40)] bg-[#030417] backdrop-blur-[10px] flex items-center justify-center w-[1300px] h-auto p-12">
+      <!-- Product Image -->
+      <img src="../src/assets/product.png" alt="Product Image" class="h-full object-cover rounded-[10px] w-[10 00px]" />
+    </div>
+  </div>
+  </section>
+
+ <!-- Features Section -->
+ <section class="py-10 px-5">
+  <!-- Features tile -->
+  <div class="flex justify-center items-center ">
+    <div class="relative border-t border-l border-r border-[rgba(99,0,255,0.50)] rounded-[32px] bg-transparent">
+      <div class="m-[5px] bg-[#6300FF] rounded-[64px] px-3 py-1.5 text-white font-medium text-[14px] leading-[16.8px] flex justify-center items-center" style="font-family: 'DM Sans', sans-serif;">
+        Features
+      </div>
+    </div>
+  </div>
+  <!-- Title Section -->
+  <div class="text-center mb-10"> 
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-medium custom-gradient-text pb-2 pt-5">
+      Our Key Features.
+    </h2>
+    <p class="text-sm sm:text-lg mb-2 font-normal custom-paragraph pt-5 pb-2 max-w-[466px] mx-auto">
+      Experience unparalleled innovation and efficiency with solutions designed for your success.
+    </p>
+  </div> 
+
+  <div class="max-w-screen-xl mx-auto px-5">
+    <div class="flex justify-between gap-[30px]">
+      <!-- Col1: Image with fixed width -->
+      <div class="w-[439px] p-4 pt-14 px-2 pb-0 rounded-lg border border-[rgba(59,59,59,0.60)] bg-[#030417] backdrop-blur-[10px]">
+        <img src="../src/assets/feature.png" alt="Main Image" class="w-full h-auto">
+      </div>
+      
+      <!-- Col2: Two containers with 50% width each -->
+      <div class="flex-1 p-4 flex">
+        <!-- Container 1 (3 sections) -->
+        <div class="w-1/2 flex flex-col gap-12">
+
+        <!-- Section 1 -->
+       <div class="flex gap-[20px] items-start">
+       <!-- Image Container -->
+       <div class="w-[50px] h-[50px] flex items-start">
+        <img src="../src/assets/feature1.png" alt="Container Image" class="w-full h-full object-contain">
+       </div>
+       <!-- Text Container -->
+       <div class="flex flex-col justify-start">
+        <h3 class="text-white text-left text-[18px] font-bold leading-[25.2px]">Image Generation App</h3>
+        <p class="text-left text-[rgba(255,255,255,0.70)] text-[16px] font-normal leading-[22.4px] pt-1 w-[200px]">Create stunning visuals with the power of AI.</p>
+       </div>
+       </div>
+
+       <!-- Section 2 -->
+       <div class="flex gap-[20px] items-start">
+       <!-- Image Container -->
+       <div class="w-[50px] h-[50px] flex items-start">
+        <img src="../src/assets/feature2.png" alt="Container Image" class="w-full h-full object-contain">
+       </div>
+       <!-- Text Container -->
+       <div class="flex flex-col justify-start">
+        <h3 class="text-white text-left text-[18px] font-bold leading-[25.2px]">Financial & Analytics Suite</h3>
+        <p class="text-left text-[rgba(255,255,255,0.70)] text-[16px] font-normal leading-[22.4px] pt-1 w-[250px]">Make smarter financial decisions with powerful forecasting and performance tracking tools.</p>
+       </div>
+       </div>
+
+        <!-- Section 3 -->
+       <div class="flex gap-[20px] items-start">
+        <!-- Image Container -->
+        <div class="w-[50px] h-[50px] flex items-start">
+        <img src="../src/assets/feature3.png" alt="Container Image" class="w-full h-full object-contain">
+         </div>
+        <!-- Text Container -->
+       <div class="flex flex-col justify-start">
+        <h3 class="text-white text-left text-[18px] font-bold leading-[25.2px]">Social Studio</h3>
+        <p class="text-left text-[rgba(255,255,255,0.70)] text-[16px] font-normal leading-[22.4px] pt-1 w-[270px]">Optimize your social media marketing with a suite of integrated tools for content scheduling, analytics, and engagement tracking.</p>
+        </div>
+       </div>
+
+      </div>
+
+      <!-- Container 2 (2 sections) -->
+     <div class="w-1/2 flex flex-col gap-8">
+       <!-- Section 1 -->
+       <div class="flex gap-[20px] items-start">
+        <!-- Image Container -->
+        <div class="w-[130px] h-[130px] flex items-start">
+         <img src="../src/assets/feature4.png" alt="Container Image" class="w-full h-full object-contain">
+        </div>
+        <!-- Text Container -->
+        <div class="flex flex-col justify-start">
+         <h3 class="text-white text-left text-[18px] font-bold leading-[25.2px]">Content Creation Tools</h3>
+         <p class="text-left text-[rgba(255,255,255,0.70)] text-[16px] font-normal leading-[22.4px] pt-1">Write blogs, captions, and more, all with AI assistance to save you time and boost your content strategy.</p>
+        </div>
+        </div>
+
+        <!-- Section 2 -->
+       <div class="flex gap-[20px] items-start">
+        <!-- Image Container -->
+        <div class="w-[95px] h-[95px] flex items-start">
+         <img src="../src/assets/feature5.png" alt="Container Image" class="w-full h-full object-contain">
+        </div>
+        <!-- Text Container -->
+        <div class="flex flex-col justify-start">
+         <h3 class="text-white text-left text-[18px] font-bold leading-[25.2px]">Project Management & Collaboration</h3>
+         <p class="text-left text-[rgba(255,255,255,0.70)] text-[16px] font-normal leading-[22.4px] pt-1">Streamline communication, track progress, and manage projects seamlessly.</p>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  
+ </section>
+
+
+<!-- How It Works Section -->
+<section class="lg:py-20 md:py-18 sm:py-10 px-5">
+  <!-- How It Works. tile -->
+  <div class="flex justify-center items-center">
+    <div class="relative border-t border-l border-r border-[rgba(99,0,255,0.50)] rounded-[32px] bg-transparent">
+      <div class="m-[5px] bg-[#6300FF] rounded-[64px] px-3 py-1.5 text-white font-medium text-[14px] leading-[16.8px] flex justify-center items-center" style="font-family: 'DM Sans', sans-serif;">
+        Few Steps
+      </div>
+    </div>
+  </div>
+
+  <!-- Title Section -->
+  <div class="text-center mb-10">
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-medium custom-gradient-text pb-0 pt-5">
+      How It Works.
+    </h2>
+    <p class="text-sm sm:text-lg mb-2 font-normal custom-paragraph pt-5 pb-2 max-w-[466px] mx-auto">
+      Experience unparalleled innovation and efficiency with solutions designed for your success.
+    </p>
+  </div>
+
+  <!-- Horizontal Containers with 1300px Width -->
+  <div class="max-w-[1300px] mx-auto flex space-x-8">
+    <!-- Container 1 -->
+    <div class="p-6 w-1/3">
+      <!-- Images -->
+      <div class="mb-4">
+        <!-- First Image (img1) - Left Aligned -->
+        <div class="flex justify-start">
+          <img src="../src/assets/hiwno1.png" alt="img1" class="w-[43.971px] h-[43.971px] rounded-lg">
+        </div>
+      
+        <!-- Second Image (img2) - Center Aligned -->
+        <div class="flex justify-start px-5">
+          <img src="../src/assets/hiwline.png" alt="img2" class="w-[1px] h-[101.18px]">
+        </div>
+      
+        <!-- Third Image (img3) - Left Aligned -->
+        <div class="flex justify-start">
+          <img src="../src/assets/hiwimg1.png" alt="img3" class="w-[50px] h-[50px] rounded-lg">
+        </div>
+      </div>
+            
+      <!-- Title -->
+      <h3 class="text-xl font-semibold mb-2" style="color: #FFF; font-size: 20px; font-style: normal; font-weight: 700; line-height: 140%;">Choose Your Tools</h3>
+      <!-- Paragraph -->
+      <p class="text-gray-600" style="color: rgba(255, 255, 255, 0.70); font-size: 16px; font-style: normal; font-weight: 400; line-height: 22.4px;">
+        Select the apps that best suit your needs—whether it’s content creation, financial planning, or customer relationship management.
+      </p>
+    </div>
+
+    <!-- Container 2 -->
+    <div class="p-6 w-1/3">
+      <!-- Images -->
+      <div class="mb-4">
+        <!-- First Image (img1) - Left Aligned -->
+        <div class="flex justify-start">
+          <img src="../src/assets/hiwno2.png" alt="img1" class="w-[43.971px] h-[43.971px] rounded-lg">
+        </div>
+      
+        <!-- Second Image (img2) - Center Aligned -->
+        <div class="flex justify-start px-5">
+          <img src="../src/assets/hiwline.png" alt="img2" class="w-[1px] h-[101.18px]">
+        </div>
+      
+        <!-- Third Image (img3) - Left Aligned -->
+        <div class="flex justify-start">
+          <img src="../src/assets/hiwimg2.png" alt="img3" class="w-[50px] h-[50px] rounded-lg">
+        </div>
+      </div>
+            
+      <!-- Title -->
+      <h3 class="text-xl font-semibold mb-2" style="color: #FFF; font-size: 20px; font-style: normal; font-weight: 700; line-height: 140%;">Integrate with Ease</h3>
+      <!-- Paragraph -->
+      <p class="text-gray-600" style="color: rgba(255, 255, 255, 0.70); font-size: 16px; font-style: normal; font-weight: 400; line-height: 22.4px;">
+        Our platform is designed to integrate seamlessly into your existing workflow. No steep learning curve.
+      </p>
+      
+    </div>
+
+   <!-- Container 3 -->
+   <div class="p-6 w-1/3">
+    <!-- Images -->
+    <div class="mb-4">
+      <!-- First Image (img1) - Left Aligned -->
+      <div class="flex justify-start">
+        <img src="../src/assets/hiwno3.png" alt="img1" class="w-[43.971px] h-[43.971px] rounded-lg">
+      </div>
+    
+      <!-- Second Image (img2) - Center Aligned -->
+      <div class="flex justify-start px-5">
+        <img src="../src/assets/hiwline.png" alt="img2" class="w-[1px] h-[101.18px]">
+      </div>
+    
+      <!-- Third Image (img3) - Left Aligned -->
+      <div class="flex justify-start">
+        <img src="../src/assets/hiwimg3.png" alt="img3" class="w-[50px] h-[50px] rounded-lg">
+      </div>
+    </div>
+          
+    <!-- Title -->
+    <h3 class="text-xl font-semibold mb-2" style="color: #FFF; font-size: 20px; font-style: normal; font-weight: 700; line-height: 140%;">Grow Your Business</h3>
+    <!-- Paragraph -->
+    <p class="text-gray-600" style="color: rgba(255, 255, 255, 0.70); font-size: 16px; font-style: normal; font-weight: 400; line-height: 22.4px;">
+      Leverage AI to increase productivity, enhance creativity, and make smarter business decisions.
+    </p>
+    
+  </div>
+  </div>
+</section>
+
+ <!-- Benefits Section -->
+<section class="lg:py-20 md:py-18 sm:py-10 px-5">
+  <!-- How It Works. tile -->
+  <div class="flex justify-center items-center">
+    <div class="relative border-t border-l border-r border-[rgba(99,0,255,0.50)] rounded-[32px] bg-transparent">
+      <div class="m-[5px] bg-[#6300FF] rounded-[64px] px-3 py-1.5 text-white font-medium text-[14px] leading-[16.8px] flex justify-center items-center" style="font-family: 'DM Sans', sans-serif;">
+        Benefits
+      </div>
+    </div>
+  </div>
+
+  <!-- Title Section -->
+  <div class="text-center mb-10">
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-medium custom-gradient-text pb-0 pt-5">
+      What You’ll Get
+    </h2>
+    <p class="text-sm sm:text-lg mb-2 font-normal custom-paragraph pt-5 pb-5 max-w-[466px] mx-auto">
+      Flexible pricing tailored to your needs. Upgrade or cancel anytime.
+    </p>
+  </div>
+
+  <!-- beffits main box -->
+  <div class="container mx-auto">
+    <div class="flex justify-center">
+      <div class="w-[1300px] flex justify-between gap-5">
+        <!-- Box 1 -->
+        <div class="w-[426.667px] h-[442px] bg-[#030417] border border-[#3B3B3B99] rounded-lg backdrop-blur-md bg-cover bg-top p-[30px] pb-[50px]" style="background-image: url('../src/assets/Benefits-img1.png');">
+          <div class="flex flex-col justify-end h-full text-center">
+            <h2 class="text-white text-2xl">Streamlined Workflow</h2>
+            <p class="text-white mt-2">Nikol’s intelligent tools work together to save you time and eliminate inefficiencies.</p>
+          </div>
+        </div>
+  
+        <!-- Box 2 -->
+        <div class="w-[426.667px] h-[442px] bg-[#030417] border border-[#3B3B3B99] rounded-lg backdrop-blur-md bg-cover bg-top p-[30px] pb-[50px]" style="background-image: url('../src/assets/Benefits-img2.png');">
+          <div class="flex flex-col justify-end h-full text-center">
+            <h2 class="text-white text-2xl">Scalable Solutions</h2>
+            <p class="text-white mt-2">As your business grows, Nikol grows with you—offering tools and resources to help you scale effectively.</p>
+          </div>
+        </div>
+  
+        <!-- Box 3 -->
+        <div class="w-[426.667px] h-[442px] bg-[#030417] border border-[#3B3B3B99] rounded-lg backdrop-blur-md bg-cover bg-top p-[30px] pb-[50px]" style="background-image: url('../src/assets/Benefits-img3.png');">
+          <div class="flex flex-col justify-end h-full text-center">
+            <h2 class="text-white text-2xl">Comprehensive Support</h2>
+            <p class="text-white mt-2">Our customer support team is here to help you every step of the way, ensuring you get the most out of our platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA Main Box -->
+<div class="w-[992px] h-[500px] px-10 py-10 mt-[80px] bg-gray-800 rounded-[20px] mx-auto relative flex items-center">
+  <!-- Background Image -->
+  <div class="absolute top-0 right-0 w-full h-full bg-cover bg-no-repeat rounded-[20px]" 
+       style="background-image: url('../src/assets/Sign-up.png'); background-position: top;">
+  </div>
+
+  <!-- Content Section -->
+  <div class="flex flex-col items-start h-full relative z-10 space-y-4 text-left">
+    <!-- Tagline -->
+    <div class="relative border-t border-l border-r border-[rgba(99,0,255,0.50)] rounded-[32px] bg-transparent">
+      <div class="m-[5px] bg-[#6300FF] rounded-[64px] px-3 py-1.5 text-white font-medium text-[14px] leading-[16.8px] flex justify-center items-center" 
+           style="font-family: 'DM Sans', sans-serif;">
+        Get Started Today
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-[42px] font-[500] normal-case leading-[110%] tracking-[-0.84px] custom-gradient-text max-w-[500px]">
+      Sign up today and start your journey toward smarter business solutions!
+    </h2>
+
+    <!-- Paragraph -->
+    <p class="text-sm sm:text-lg font-normal custom-paragraph max-w-[466px] pb-5">
+      Unlock the power of AI to revolutionize your business. With easy onboarding, Nikolis ready to help you take the next step.
+    </p>
+
+    <!-- Button -->
+    <button 
+  class="w-[155px] h-[53.514px] bg-[#1F1F1F] text-white border border-[#3B3B3B] rounded-[64px] transition duration-300 hover:bg-[#6300FF]">
+  Sign up today
+</button>
+
+    
+  </div>
+</div>
+
+
+  <!-- Footer section -->
+  <div class="flex flex-col min-h-screen">
+    <main class="flex-grow">
+      <!-- Main content here -->
+    </main>
+  
+    <footer class="bg-[#0d0c2c] text-white py-10 w-full">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 px-4">
+        <!-- Logo and Socials -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-bold">Nikol.AI</h2>
+          <p class="text-sm">Stay Ahead with the Latest AI Trends!</p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-8 h-8 rounded-full bg-[#1A1B4B] flex items-center justify-center">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-[#1A1B4B] flex items-center justify-center">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-[#1A1B4B] flex items-center justify-center">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-[#1A1B4B] flex items-center justify-center">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">About Us</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+            <li><a href="#" class="hover:underline">About us</a></li>
+            <li><a href="#" class="hover:underline">Blog</a></li>
+          </ul>
+        </div>
+        <!-- Help -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Help</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">Customer Support</a></li>
+            <li><a href="#" class="hover:underline">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Email</h3>
+          <p class="text-sm">support@clothelier.com</p>
+          <h3 class="text-lg font-semibold mt-4">Phone</h3>
+          <p class="text-sm">+1 (555) 123-4567</p>
+        </div>
+        <!-- Subscribe -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Stay Updated with Our Latest Features and Insights!</h3>
+          <form class="flex items-center space-x-2">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="flex-grow px-4 py-2 rounded-full bg-[#1A1B4B] text-sm placeholder-gray-400 focus:outline-none"
+            />
+            <button
+              type="submit"
+              class="bg-white text-black px-6 py-2 rounded-full font-semibold text-sm"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p class="text-sm text-gray-400 mt-4">
+            Subscribe to our newsletter and be the first to know about new updates, features, and industry news!
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-10 pt-6">
+        <p class="text-center text-sm text-gray-400">
+          © Copyright 2024, All Rights Reserved by NikolAI
+        </p>
+      </div>
+    </footer>
+  </div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+</section> 
+
+  <script>
+    // Hamburger Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.createElement('div');
+    mobileMenu.id = "mobile-menu"; // Creating the mobile menu dynamically
+    mobileMenu.innerHTML = `
+      <nav class="flex flex-col items-center gap-6 text-white">
+        <a href="#">Product</a>
+        <a href="#">Integrations</a>
+        <a href="#">Blog</a>
+        <a href="#">Pricing</a>
+      </nav>
+      <span class="close-menu">&times;</span>
+    `;
+    document.body.appendChild(mobileMenu);
+
+    const closeMenu = mobileMenu.querySelector('.close-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+
+    // Swiper Configuration
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
